@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Test</title>
+		<link href="css/index.css" type="text/css" rel="stylesheet" />
+		<script src="js/echarts.min.js"></script>
+	</head>
+	<body>
+		<div id="all">
+			<div id="left">
+				<ul>
+					<li><img src="img/HTML5_3D_Effects_32.png" /><a href="#">综合演示</a></li>
+					<li><img src="img/HTML5_Connectivity_32.png" /><a href="#">综合查询</a></li>
+					<li><img src="img/HTML5_Device_Access_32.png" /><a href="#">综合分析</a></li>
+					<li><img src="img/HTML5_Offline_Storage_32.png" /><a href="#">煤炭门户</a></li>
+				</ul>
+			</div>
+			<div id="right">
+				<div id="top">
+					<div id="top_top"><p>丨 山西联启科技有限公司</p></div>
+					<div id="top-bottom">
+						<div>
+							<div class="top_left"  style="background-color: #3A93ED;">产量信息</div>
+							<div class="top_right" style="background-color: #53A9FF;">
+								<p>年产量：</p>
+								<p> </p>
+								<p> </p>
+								<p>剩余可采存储量：</p>
+							</div>
+						</div>
+						<div>
+							<div class="top_left" style="background-color: #E08C0F;">产量信息</div>
+							<div class="top_right" style="background-color: #F79F19;">
+								<p>年产量：</p>
+								<p>剩余可采存储量：</p>
+								<p>年产量：</p>
+								<p>剩余可采存储量：</p>
+							</div>
+						</div>
+						<div>
+							<div class="top_left" style="background-color: #5E5BE8;">产量信息</div>
+							<div class="top_right" style="background-color: #7C7AFF;">
+								<p>年产量：</p>
+								<p>剩余可采存储量：</p>
+								<p>年产量：</p>
+								<p>剩余可采存储量：</p>
+							</div>
+						</div>
+						<div>
+							<div class="top_left" style="background-color: #05A87D;">产量信息</div>
+							<div class="top_right" style="background-color: #00BE8E;">
+								<p>年产量：</p>
+								<p>剩余可采存储量：</p>
+								<p>年产量：</p>
+								<p>剩余可采存储量：</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="center">
+					<div id="center_top"><p>丨 人员统计分析</p></div>
+					<div id="center-bottom">
+						<div class="center_box">
+							<div class="center_box_top"><p>矿井监控演练培训信息</p></div>
+							<div class="center_box_buttom"></div>
+						</div>
+						<div class="center_box">
+							<div class="center_box_top"><p>矿井监控演练培训信息</p></div>
+							<div class="center_box_buttom"></div>
+						</div>
+						<div class="center_box">
+							<div class="center_box_top"><p>矿井监控演练培训信息</p></div>
+							<div class="center_box_buttom"></div>
+						</div>
+						<div class="center_box">
+							<div class="center_box_top"><p>矿井监控演练培训信息</p></div>
+							<div class="center_box_buttom"></div>
+						</div>
+						
+					</div>
+				</div>
+				<div id="bottom">
+					<div id="bottom_top"><p>丨 山西联启科技安全评估分析</p></div>
+					<div id="bottom-bottom">
+						<p>web.tedu.cn 2019-07- 评价 广告前端开发规范与说明 - ET.frog - 博客园2018年3月23日 - 对于前端JavaScript这种比较宽松自由的编程语言来说,严格遵循编码规范和格式化风格指南极为重要。前端开发人员需严格遵循开发规范,并且使用自动代码检...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script>
+		window.onload =function(){
+		var divs = document.getElementsByClassName("center_box_buttom")
+		console.log(divs);
+		var dds = new Array(4);
+		for(var i = 0; i<divs.length ; i++){
+			dds[i]= echarts.init(divs[i]);
+		}
+		var option = {
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [120, 200, 150, 80, 70, 110, 130],
+        type: 'bar'
+    }]
+};
+	for(var s = 0; s< dds.length;s++){
+		dds[s].setOption(option);
+	}
+	
+		}
+	
+	/*for(var i = 0; i<= divs.length ; i++){
+		divs[i].setOptions(option);
+	}*/
+	
+		
+	</script>
+</html>
